@@ -1,0 +1,11 @@
+### Hello World
+docker run ubuntu /bin/echo 'Hello world'
+
+
+### Interactive Container
+docker run -t -i ubuntu /bin/bash
+
+docker run -d ubuntu /bin/sh -c "while true; do echo [$(date)] - hello world; sleep 1; done"
+
+
+docker run -d -P training/webapp python app.py
