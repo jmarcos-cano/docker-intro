@@ -1,3 +1,15 @@
+#### ISOLATED ENVS
+CMD="cat /etc/os-release"
+
+docker run -it ubuntu $CMD  
+docker run -it debian $CMD
+docker run -it alpine $CMD
+
+CMD="uname -a"
+docker run -it ubuntu $CMD
+docker run -it debian $CMD
+docker run -it alpine $CMD
+
 ### HELLO WORLD
 docker run ubuntu /bin/echo 'Hello world'
 
@@ -31,7 +43,5 @@ docker stop $CID
 
 ### RUNNING WITH DEFINED NAME
 docker run -d --name python_flask -p 80:5000 training/webapp python app.py
-docker ps 
-docker stop python_flask 
-
-
+docker ps
+docker stop python_flask
